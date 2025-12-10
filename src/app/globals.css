@@ -1,26 +1,39 @@
-@import "tailwindcss";
+/* Tailwind v4 imports */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
+/* Global font */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ui-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, "Roboto Mono", "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* App base appearance */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--ui-font);
+  background-color: #0b1020;
+  color: #e2e8f0;
+
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(120, 0, 255, 0.08), transparent 40%),
+    linear-gradient(to right, rgba(128,128,128,0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128,128,128,0.07) 1px, transparent 1px);
+    
+  background-size: auto, 24px 24px, 24px 24px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Smooth focus */
+:focus {
+  outline: 2px solid rgba(164, 243, 128, 0.65);
+  outline-offset: 2px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Code blocks */
+.code-block {
+  font-family: var(--ui-font);
+  font-size: 0.85rem;
+  white-space: pre-wrap;
 }
