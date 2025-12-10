@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 **CodeNexus — AI-Powered Code Snippet Manager**
 
-## Getting Started
+A beautifully designed **Next.js 15 + React 19 + Tailwind CSS v4** application for storing, organizing, and analyzing code snippets.
+Features include search, tagging, filtering, editing, AI-assisted explanation/optimization, and a modern UI.
 
-First, run the development server:
+---
+
+## 🚀 **Tech Stack**
+
+| Technology                  | Purpose                       |
+| --------------------------- | ----------------------------- |
+| **Next.js 15 (App Router)** | Framework & routing           |
+| **React 19**                | UI engine with React Compiler |
+| **Tailwind CSS v4**         | Styling                       |
+| **Lucide Icons**            | Icon system                   |
+| **LocalStorage**            | Persistent snippet storage    |
+| **Anthropic Claude API**    | AI explanation & optimization |
+
+---
+
+## ✨ **Features**
+
+### 🧠 AI-Powered Enhancements
+
+* Explain code
+* Optimize code
+* Identify potential improvements
+* Claude Sonnet model integration
+
+### 💾 Snippet Management
+
+* Add/edit/delete code snippets
+* Auto-save with LocalStorage
+* Syntax-friendly preview blocks
+
+### 🔍 Search & Filtering
+
+* Search by title, description, or tags
+* Filter by programming language
+
+### 🏷️ Tag System
+
+* Press Enter to add tags
+* Remove tags dynamically
+
+### 💎 UI & UX
+
+* Beautiful glassmorphism layout
+* Responsive design
+* Smooth modals & transitions
+* Fully compatible with React Compiler + Next.js client components
+
+---
+
+## 📁 **Project Structure**
+
+```
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+│
+├── components/
+│   └── CodeNexus/
+│       ├── CodeNexus.jsx
+│       ├── AddSnippetModal.jsx
+│       ├── AiModal.jsx
+│       └── CodeCard.jsx
+│
+├── styles/
+│   └── globals.css  (optional alternative location)
+│
+├── public/
+│   └── favicon.ico
+│
+next.config.ts
+postcss.config.js
+tailwind.config.ts
+package.json
+README.md
+```
+
+---
+
+## 🛠️ **Installation**
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/code-nexus-next.git
+cd code-nexus-next
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👉 **[http://localhost:3000](http://localhost:3000)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧪 **Build for Production**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 **Environment Variables (AI Integration)**
 
-## Deploy on Vercel
+If you integrate the Claude API officially, create:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+.env.local
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+With:
+
+```
+ANTHROPIC_API_KEY=your_key_here
+```
+
+Update the API route or fetch headers accordingly.
+
+(Current implementation uses a placeholder fetch URL.)
+
+---
+
+## 🖼️ **Screenshots**
+
+Add your own screenshots here. Example:
+
+```
+![Dashboard](./screenshots/dashboard.png)
+![Modal](./screenshots/modal.png)
+```
+
+---
+
+## 📦 Deployment
+
+### ⚡ Deployed to Vercel 
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
+---
+
+## 📝 License
+
+MIT License.
+Free to modify, distribute, and use commercially.
+
+---
+
+## ⭐ Support the Project
+
+If you like CodeNexus, give it a 🌟 on GitHub!
+
+---
+
